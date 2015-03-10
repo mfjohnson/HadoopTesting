@@ -1,0 +1,4 @@
+A = LOAD  '2014QTR1_num.dat' USING PigStorage('\t');
+X = SAMPLE A 0.01;
+Z1 = FOREACH A GENERATE COUNT_STAR(A);
+DUMP Z1;
